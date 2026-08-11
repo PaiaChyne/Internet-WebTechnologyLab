@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>QuickCart | Groceries Delivered in Minutes</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- Navbar -->
+
+<nav class="navbar">
+
+<div class="logo">
+
+<i class="fa-solid fa-basket-shopping"></i>
+
+QuickCart
+
+</div>
+
+<div class="search-box">
+
+<input
+type="text"
+id="search"
+placeholder="Search groceries...">
+
+</div>
+
+<div class="nav-icons">
+
+<a href="cart.html">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+<span id="cart-count">0</span>
+
+</a>
+
+</div>
+
+</nav>
+
+<!-- Hero -->
+
+<section class="hero">
+
+<div class="hero-text">
+
+<h1>Groceries Delivered in 10 Minutes ⚡</h1>
+
+<p>
+
+Fresh Fruits, Vegetables, Dairy,
+Bakery & Daily Essentials delivered to your doorstep.
+
+</p>
+
+<a href="#products" class="btn">
+
+Shop Now
+
+</a>
+
+</div>
+
+</section>
+
+<!-- Categories -->
+
+<section class="categories">
+
+<h2>Shop by Category</h2>
+
+<div class="category-grid">
+
+<div class="category">🥬 Vegetables</div>
+
+<div class="category">🍎 Fruits</div>
+
+<div class="category">🥛 Dairy</div>
+
+<div class="category">🍞 Bakery</div>
+
+<div class="category">🍚 Rice</div>
+
+<div class="category">🥤 Drinks</div>
+
+<div class="category">🍿 Snacks</div>
+
+<div class="category">🧴 Household</div>
+
+</div>
+
+</section>
+
+<!-- Products -->
+
+<section id="products">
+
+<h2>Popular Products</h2>
+
+<div class="product-grid">
+
+<!-- Apple -->
+
+<div class="card">
+
+<img src="https://www.thefruitcompany.com/cdn/shop/products/ruby-red-apples_4_1.jpg?v=1664807434">
+
+<h3>Fresh Apples</h3>
+
+<p>1 Kg</p>
+
+<h4>₹199</h4>
+
+<button onclick="addToCart('Fresh Apples',199)">
+Add
+</button>
+
+</div>
+
+<!-- Milk -->
+
+<div class="card">
+
+<img src="https://img.freepik.com/premium-photo/milk-carton-packs-isolated-white-milk-boxes_505080-1318.jpg?w=2000">
+
+<h3>Milk</h3>
+
+<p>500 ml</p>
+
+<h4>₹35</h4>
+
+<button onclick="addToCart('Milk',35)">
+Add
+</button>
+
+</div>
+
+<!-- Bread -->
+
+<div class="card">
+
+<img src="https://img.freepik.com/premium-photo/close-up-brown-bread-white-background-with-clipping-path_1026019-599.jpg?w=2000">
+
+<h3>Brown Bread</h3>
+
+<p>400 g</p>
+
+<h4>₹45</h4>
+
+<button onclick="addToCart('Brown Bread',45)">
+Add
+</button>
+
+</div>
+
+<!-- Eggs -->
+
+<div class="card">
+
+<img src="https://static.vecteezy.com/system/resources/previews/048/155/922/non_2x/white-eggs-in-a-carton-photo.jpg">
+
+<h3>Eggs</h3>
+
+<p>12 Pieces</p>
+
+<h4>₹95</h4>
+
+<button onclick="addToCart('Eggs',95)">
+Add
+</button>
+
+</div>
+
+<!-- Rice -->
+
+<div class="card">
+
+<img src="https://img.freepik.com/premium-photo/rice-packet-mockup_1272625-11268.jpg">
+
+<h3>Rice</h3>
+
+<p>5 Kg</p>
+
+<h4>₹599</h4>
+
+<button onclick="addToCart('Rice',599)">
+Add
+</button>
+
+</div>
+
+<!-- Oil -->
+
+<div class="card">
+
+<img src="https://thumbs.dreamstime.com/z/oil-8249429.jpg">
+
+<h3>Oil</h3>
+
+<p>1 Litre</p>
+
+<h4>₹169</h4>
+
+<button onclick="addToCart('Oil',169)">
+Add
+</button>
+
+</div>
+
+<!-- Tomatoes -->
+<div class="card">
+
+<img src="https://cdn.pixabay.com/photo/2022/09/05/09/50/tomatoes-7433786_1280.jpg">
+
+<h3>Tomatoes</h3>
+
+<p> 1 kg</p>
+
+<h4>₹150</h4>
+
+<button onclick="addToCart('Tomatoes',150)">
+Add
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Footer -->
+
+<footer>
+
+<p>
+
+© 2026 QuickCart
+
+
+</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

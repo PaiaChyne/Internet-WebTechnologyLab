@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Technology Quiz</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Animated Background -->
+    <div class="bg">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Quiz Card -->
+    <div class="quiz-container">
+
+        <div class="header">
+
+            <h1>🌐 Web Technology Quiz</h1>
+
+            <p>HTML • CSS • JavaScript</p>
+
+        </div>
+
+        <!-- Progress -->
+        <div class="progress-container">
+
+            <div class="progress-text">
+                <span id="question-number">Question 1 / 20</span>
+
+                <span id="timer">10:00</span>
+            </div>
+
+            <div class="progress-bar">
+
+                <div id="progress"></div>
+
+            </div>
+
+        </div>
+
+        <!-- Question -->
+        <div class="quiz-body">
+
+            <h2 id="question">
+                Loading...
+            </h2>
+
+            <div id="answer-buttons" class="answer-buttons">
+
+            </div>
+
+        </div>
+
+        <!-- Buttons -->
+
+        <div class="buttons">
+
+            <button id="prev-btn">⬅ Previous</button>
+
+            <button id="next-btn">Next ➜</button>
+
+        </div>
+
+    </div>
+
+    <!-- Result -->
+
+    <div class="result-card hidden" id="result-card">
+
+        <h1>🎉 Quiz Completed!</h1>
+
+        <h2 id="final-score">0 / 20</h2>
+
+        <h3 id="percentage">0%</h3>
+
+        <p id="remark"></p>
+
+        <button onclick="location.reload()">
+
+            Restart Quiz
+
+        </button>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

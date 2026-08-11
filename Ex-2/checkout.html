@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickCart | Checkout</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- Navbar -->
+
+<nav class="navbar">
+
+    <div class="logo">
+        <i class="fa-solid fa-basket-shopping"></i>
+        QuickCart
+    </div>
+
+    <div class="nav-icons">
+
+        <a href="index.html">
+            <i class="fa-solid fa-house"></i>
+        </a>
+
+        &nbsp;&nbsp;
+
+        <a href="cart.html">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </a>
+
+    </div>
+
+</nav>
+
+<!-- Checkout -->
+
+<section class="checkout">
+
+<h1>Checkout</h1>
+
+<div class="checkout-container">
+
+<!-- Billing Form -->
+
+<div class="billing">
+
+<h2>Delivery Details</h2>
+
+<form id="checkoutForm">
+
+<input
+type="text"
+placeholder="Full Name"
+required>
+
+<input
+type="email"
+placeholder="Email Address"
+required>
+
+<input
+type="tel"
+placeholder="Phone Number"
+required>
+
+<textarea
+rows="5"
+placeholder="Delivery Address"
+required></textarea>
+
+<select required>
+
+<option value="">
+Choose Payment Method
+</option>
+
+<option>
+Cash on Delivery
+</option>
+
+<option>
+UPI
+</option>
+
+<option>
+Credit Card
+</option>
+
+<option>
+Debit Card
+</option>
+
+</select>
+
+<button class="btn" type="submit">
+
+Place Order
+
+</button>
+
+</form>
+
+</div>
+
+<!-- Order Summary -->
+
+<div class="summary">
+
+<h2>Your Order</h2>
+
+<div id="summary-items">
+
+</div>
+
+<h3 id="summary-total">
+
+Total : ₹0
+
+</h3>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+
+© 2026 QuickCart
+
+</p>
+
+</footer>
+
+<script src="checkout.js"></script>
+
+</body>
+
+</html>
