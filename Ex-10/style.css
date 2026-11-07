@@ -1,0 +1,184 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+    --navy: #10243e;
+    --blue: #147cf2;
+    --muted: #60738d;
+    --line: #e3ebf5;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f1f5fb;
+    color: #172b4d;
+    min-height: 100vh;
+}
+
+/* ---------- Header ---------- */
+.hero {
+    background: linear-gradient(135deg, #10243e, #1c5fa8);
+    color: white;
+    text-align: center;
+    padding: 56px 20px 90px;
+}
+.hero h1 { font-size: 38px; letter-spacing: 0.5px; }
+.hero .sub { margin-top: 10px; color: #c6d8f0; font-size: 16px; }
+
+/* ---------- Layout ---------- */
+.app {
+    max-width: 1000px;
+    margin: -50px auto 40px;
+    padding: 0 20px;
+}
+
+.toolbar {
+    display: flex;
+    gap: 12px;
+    background: white;
+    padding: 16px;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(16, 36, 62, 0.15);
+}
+
+/* ---------- Search bar ---------- */
+.search-wrap { position: relative; flex: 1; }
+.search-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+}
+#searchBox {
+    width: 100%;
+    padding: 13px 14px 13px 44px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    font-size: 15px;
+    color: #172b4d;
+    background: #f9fbff;
+    outline: none;
+    transition: 0.2s;
+}
+#searchBox:focus {
+    border-color: var(--blue);
+    background: white;
+    box-shadow: 0 0 0 3px rgba(20, 124, 242, 0.15);
+}
+
+button {
+    background: var(--blue);
+    color: white;
+    border: 0;
+    padding: 13px 26px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+button:hover { background: #0d62c8; transform: translateY(-1px); }
+
+/* ---------- Count and status ---------- */
+.info-row { margin: 20px 4px 0; }
+.count { color: var(--muted); font-size: 14px; font-weight: 600; }
+
+.status { min-height: 22px; margin: 6px 4px; font-size: 14px; color: var(--muted); }
+.status.error {
+    background: #fdecec; color: #b3261e; border: 1px solid #f5c2c0;
+    padding: 10px 14px; border-radius: 8px;
+}
+
+/* ---------- Book cards ---------- */
+.book-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 16px;
+    margin-top: 10px;
+}
+
+.book-card {
+    --c1: #147cf2;           /* default cover colours */
+    --c2: #0d62c8;
+    display: flex;
+    gap: 16px;
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px;
+    transition: 0.25s;
+    animation: fadeUp 0.4s ease both;
+}
+.book-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 26px rgba(16, 36, 62, 0.14);
+}
+
+/* Little book cover with the first letter of the title */
+.cover {
+    flex: 0 0 64px;
+    height: 92px;
+    border-radius: 4px 8px 8px 4px;
+    background: linear-gradient(135deg, var(--c1), var(--c2));
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Georgia, serif;
+    font-size: 32px;
+    font-weight: 700;
+    box-shadow: inset 6px 0 0 rgba(0, 0, 0, 0.18), 3px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.info { min-width: 0; }
+.book-card h3 { font-size: 16px; line-height: 1.3; color: var(--navy); margin-bottom: 4px; }
+.book-card .author { color: var(--muted); font-size: 14px; margin-bottom: 10px; }
+
+.meta { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.tag {
+    background: color-mix(in srgb, var(--c1) 14%, white);
+    color: var(--c2);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 3px 11px;
+    border-radius: 20px;
+}
+.year { color: #8a9bb0; font-size: 13px; }
+
+/* Cover colour for each genre */
+.genre-fiction            { --c1: #f59e0b; --c2: #b45309; }
+.genre-historical-fiction { --c1: #a16207; --c2: #713f12; }
+.genre-fantasy            { --c1: #8b5cf6; --c2: #6d28d9; }
+.genre-romance            { --c1: #ec4899; --c2: #be185d; }
+.genre-young-adult        { --c1: #14b8a6; --c2: #0f766e; }
+.genre-dystopian          { --c1: #64748b; --c2: #334155; }
+.genre-thriller           { --c1: #ef4444; --c2: #b91c1c; }
+.genre-mystery            { --c1: #6366f1; --c2: #4338ca; }
+.genre-science-fiction    { --c1: #0ea5e9; --c2: #0369a1; }
+.genre-adventure          { --c1: #22c55e; --c2: #15803d; }
+.genre-non-fiction        { --c1: #f97316; --c2: #c2410c; }
+.genre-self-help          { --c1: #84cc16; --c2: #4d7c0f; }
+.genre-biography          { --c1: #d946ef; --c2: #a21caf; }
+
+.no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: var(--muted);
+    padding: 40px 0;
+    font-size: 16px;
+}
+
+.footer { text-align: center; color: #8a9bb0; font-size: 13px; padding: 0 0 30px; }
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 560px) {
+    .hero h1 { font-size: 30px; }
+    .toolbar { flex-direction: column; }
+    .book-list { grid-template-columns: 1fr; }
+}
