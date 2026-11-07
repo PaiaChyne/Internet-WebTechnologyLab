@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="app">
+    <h1>Weather Dashboard</h1>
+
+    <div class="controls">
+        <select id="city">
+            <option value="chennai">Chennai</option>
+            <option value="delhi">Delhi</option>
+            <option value="mumbai">Mumbai</option>
+            <option value="bengaluru">Bengaluru</option>
+            <option value="london">London</option>
+        </select>
+        <button id="getWeather">Get Weather</button>
+    </div>
+
+    <div id="status" class="status"></div>
+
+    <section id="result" class="hidden">
+        <div class="current">
+            <div class="icon" id="icon"></div>
+            <div>
+                <h2 id="cityName"></h2>
+                <div class="temp"><span id="temp"></span>&deg;C</div>
+                <div id="condition" class="condition"></div>
+            </div>
+        </div>
+
+        <div class="details">
+            <div><span id="humidity"></span>%<small>Humidity</small></div>
+            <div><span id="wind"></span> km/h<small>Wind</small></div>
+        </div>
+
+        <h3>5-day forecast</h3>
+        <div id="forecast" class="forecast"></div>
+
+        <p class="updated">Updated: <span id="updated"></span></p>
+    </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
